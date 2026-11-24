@@ -1,0 +1,601 @@
+/* ==========================================================
+   style.css – STEVENS TABOR / 2025 (IM1 Projektwebsite)
+   Aufbau:
+   1. Farben (Light- und Dark-Mode)
+   2. Grundlagen (Schrift, Abstände)
+   3. Navigation
+   4. Hero (Startseite)
+   5. Inhaltsbereiche (Warum dieses Bike, Touren)
+   6. Über mich
+   7. Kontakt und Impressum
+   8. Footer mit Light/Dark-Schalter
+   9. Kleine Bildschirme
+   Die Werte stammen aus dem Figma-Entwurf "IM-1 – Konzeption".
+   ========================================================== */
+
+/* 1. FARBEN
+   Alle Farben stehen als Variablen hier. Der Dark-Mode überschreibt sie,
+   sobald am <html>-Element data-theme="dark" gesetzt ist (siehe js/theme.js). */
+:root {
+    --background: #f7f6ef;
+    --primary: #e2e9d8;
+    --secondary: #f0e6d6;
+    --accent: #416449;
+    --text-primary: #203226;
+    --text-secondary: #526052;
+}
+
+:root[data-theme="dark"] {
+    --background: #27312a;
+    --primary: #303e30;
+    --secondary: #4e4434;
+    --accent: #b8d398;
+    --text-primary: #f4f2ef;
+    --text-secondary: #c2cabb;
+}
+
+/* 2. GRUNDLAGEN */
+* {
+    box-sizing: border-box; /* Padding zählt zur Breite dazu */
+}
+
+body {
+    margin: 0;
+    font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 16px;
+    line-height: 1.55;
+    color: var(--text-secondary);
+    background: var(--background);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+}
+
+/* Gleiche Überschriften auf allen Seiten */
+h1,
+h2,
+h3 {
+    margin: 0;
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+h1 { font-size: 52px; line-height: 1.15; }
+h2 { font-size: 30px; line-height: 1.25; }
+h3 { font-size: 30px; line-height: 1.25; }
+
+p {
+    margin: 0 0 1.55em;
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+/* Kleine Zeile über einer Überschrift, z. B. "PERSÖNLICH" */
+.eyebrow {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    color: var(--accent);
+}
+
+/* Jeder Bereich hat links und rechts 80px Rand */
+.section {
+    padding: 48px 80px;
+}
+
+/* 3. NAVIGATION */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 20px 80px;
+    background: var(--background);
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.25;
+    text-decoration: none;
+    color: var(--text-primary);
+}
+
+.site-nav ul {
+    display: flex;
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.site-nav a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 12px;
+    border-radius: 10px;
+    background: var(--primary);
+    color: var(--text-primary);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.4;
+    text-decoration: none;
+}
+
+/* Die Tabs "Home" und "Über mich" sind gleich breit */
+.site-nav li:not(:last-child) a {
+    width: 158px;
+}
+
+/* Die aktuelle Seite ist hervorgehoben */
+.site-nav a[aria-current="page"] {
+    background: var(--secondary);
+}
+
+.site-nav a:hover {
+    background: var(--secondary);
+}
+
+/* 4. HERO (Startseite) */
+.hero {
+    display: flex;
+    gap: 56px;
+    align-items: flex-start;
+    background: var(--primary);
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    flex: 0 0 452px;
+}
+
+.hero-text h1 {
+    margin: 0;
+}
+
+.hero-text p {
+    margin: 0;
+}
+
+.hero-bild {
+    flex: 1;
+    min-width: 0;
+}
+
+.hero-bild img {
+    width: 100%;
+    height: auto;
+}
+
+/* 5. INHALTSBEREICHE */
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    background: var(--background);
+}
+
+.content h2 {
+    margin: 0;
+}
+
+/* Kacheln mit technischen Daten (3 pro Zeile) */
+.fakten {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin: 0;
+}
+
+.fakt {
+    padding: 24px;
+    background: var(--secondary);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.fakt dt {
+    margin-bottom: 8px;
+    color: var(--text-secondary);
+}
+
+.fakt dd {
+    margin: 0;
+    color: var(--text-primary);
+}
+
+/* Karten mit den Lieblingstouren (3 nebeneinander) */
+.touren {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.tour {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background: var(--primary);
+}
+
+.tour img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover; /* Bild füllt die Fläche, ohne verzerrt zu werden */
+}
+
+.tour h3 {
+    margin-bottom: 10px;
+}
+
+.tour p {
+    margin: 0;
+    color: var(--text-secondary);
+}
+
+/* 6. ÜBER MICH */
+.ueber-mich {
+    display: flex;
+    gap: 64px;
+    align-items: stretch;
+    background: var(--background);
+}
+
+.ueber-mich-text,
+.ueber-mich-bild {
+    flex: 1;
+    min-width: 0;
+}
+
+.ueber-mich-text {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.ueber-mich-text > * {
+    margin: 0;
+}
+
+.text-block {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.text-block > * {
+    margin: 0;
+}
+
+.einladung {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.25;
+    color: var(--text-secondary);
+}
+
+.ueber-mich-bild img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Button (Link im Aussehen eines Buttons) */
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-start;
+    width: 200px;
+    height: 60px;
+    padding: 15px 25px;
+    border: 3px solid var(--accent);
+    border-radius: 15px;
+    background: var(--primary);
+    color: var(--accent);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.button:hover {
+    background: var(--secondary);
+}
+
+/* 7. KONTAKT UND IMPRESSUM */
+.kontakt {
+    display: flex;
+    gap: 64px;
+    align-items: flex-start;
+    background: var(--background);
+}
+
+.kontakt-einstieg {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    flex: 0 0 400px;
+}
+
+.kontakt-einstieg > * {
+    margin: 0;
+}
+
+.direkter-kontakt {
+    padding: 24px;
+    background: var(--secondary);
+}
+
+.direkter-kontakt .label {
+    margin-bottom: 8px;
+    color: var(--accent);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.direkter-kontakt a {
+    color: var(--text-primary);
+}
+
+/* Kontaktformular */
+.formular {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    flex: 1;
+    min-width: 0;
+    padding: 32px;
+    background: var(--primary);
+}
+
+.formular-zeile {
+    display: flex;
+    gap: 16px;
+}
+
+.feld {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+    min-width: 0;
+}
+
+.feld label {
+    color: var(--text-primary);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.feld input,
+.feld textarea {
+    width: 100%;
+    padding: 16px;
+    border: 1px solid var(--text-primary);
+    border-radius: 0;
+    background: var(--background);
+    color: var(--text-primary);
+    font: inherit;
+}
+
+.feld input {
+    height: 56px;
+}
+
+.feld textarea {
+    height: 160px;
+    resize: vertical;
+}
+
+.feld input::placeholder,
+.feld textarea::placeholder {
+    color: var(--text-secondary);
+}
+
+.formular button {
+    height: 48px;
+    padding: 10px;
+    border: 0;
+    border-radius: 8px;
+    background: var(--accent);
+    color: var(--primary);
+    font: inherit;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.formular button:hover {
+    opacity: 0.9;
+}
+
+.hinweis {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--text-secondary);
+}
+
+/* Impressum */
+.impressum {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    background: var(--background);
+}
+
+.impressum h2 {
+    font-size: 52px;
+    line-height: 1.15;
+}
+
+.impressum-box {
+    padding: 24px;
+    background: var(--primary);
+    color: var(--text-primary);
+}
+
+.impressum-box .label {
+    margin-bottom: 12px;
+    color: var(--accent);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.impressum-box h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.55;
+}
+
+.impressum-box p {
+    margin: 0 0 1.55em;
+}
+
+.impressum-box p:last-child {
+    margin-bottom: 0;
+}
+
+/* 8. FOOTER mit Light/Dark-Schalter */
+.site-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    padding: 30px 80px;
+    background: var(--secondary);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.footer-text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-text p {
+    margin: 0;
+}
+
+.footer-projekt {
+    color: var(--accent);
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.theme-switch {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--text-secondary);
+}
+
+/* Der Schalter selbst: ein Button, der wie ein Kippschalter aussieht */
+.theme-toggle {
+    position: relative;
+    width: 48px;
+    height: 28px;
+    padding: 0;
+    border: 0;
+    border-radius: 14px;
+    background: var(--accent);
+    cursor: pointer;
+}
+
+.theme-toggle::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 4px; /* 4px Abstand wie im Entwurf */
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--background);
+    transition: transform 0.2s;
+}
+
+/* Im Dark-Mode springt der Punkt nach rechts */
+.theme-toggle[aria-checked="true"]::after {
+    transform: translateX(20px);
+}
+
+/* Tastatur-Fokus sichtbar machen */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 2px;
+}
+
+/* 9. KLEINE BILDSCHIRME
+   Der Entwurf ist für Desktop. Diese Regeln sorgen nur dafür,
+   dass die Seite auf schmalen Fenstern nicht kaputtgeht. */
+@media (max-width: 960px) {
+    .section,
+    .site-header,
+    .site-footer {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .site-header,
+    .site-footer,
+    .hero,
+    .ueber-mich,
+    .kontakt,
+    .formular-zeile {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .site-nav ul {
+        flex-wrap: wrap;
+    }
+
+    .hero-text,
+    .kontakt-einstieg {
+        flex: none;
+        width: 100%;
+    }
+
+    .hero-bild,
+    .formular,
+    .feld {
+        width: 100%;
+    }
+
+    .fakten,
+    .touren {
+        grid-template-columns: 1fr;
+    }
+
+    .ueber-mich-bild img {
+        height: auto;
+    }
+
+    h1,
+    .impressum h2 {
+        font-size: 40px;
+    }
+}

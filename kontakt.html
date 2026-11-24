@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>STEVENS TABOR 2025 – Home</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/theme-toggle.js"></script>
+</head>
+
+<body>
+
+
+<header class="site-header">
+  <a class="logo" href="index.html">STEVENS TABOR / 2025</a>
+  <nav class="site-nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="ueber-mich.html">Über mich</a></li>
+      <li><a href="kontakt.html">Kontakt &amp; Impressum</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <!-- Kontakt: Einladung links, Formular rechts -->
+  <section class="section kontakt">
+    <div class="kontakt-einstieg">
+      <p class="eyebrow">Kontakt</p>
+      <h1>Schreib mir.</h1>
+      <p>Eine Frage zum Tabor oder zu meinem Projekt? Ich freue mich über deine Nachricht.</p>
+      <div class="direkter-kontakt">
+        <p class="label">E-Mail</p>
+        <a href="mailto:Yanik.Luescher@students.fhgr.ch">Yanik.Luescher@students.fhgr.ch</a>
+      </div>
+    </div>
+
+    <!-- Demo-Formular: Es wird nichts versendet (siehe js/theme.js) -->
+    <form class="formular" action="#" method="post">
+      <div class="formular-zeile">
+        <div class="feld">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Dein Name" required>
+        </div>
+        <div class="feld">
+          <label for="email">E-Mail-Adresse</label>
+          <input type="email" id="email" name="email" placeholder="Deine E-Mail-Adresse" required>
+        </div>
+      </div>
+      <div class="feld">
+        <label for="betreff">Betreff</label>
+        <input type="text" id="betreff" name="betreff" placeholder="Worum geht es?">
+      </div>
+      <div class="feld">
+        <label for="nachricht">Nachricht</label>
+        <textarea id="nachricht" name="nachricht" placeholder="Deine Nachricht" required></textarea>
+      </div>
+      <button type="submit">Nachricht senden</button>
+      <p class="hinweis">Demo-Formular, es werden keine Nachrichten versendet.</p>
+    </form>
+  </section>
+
+  <!-- Impressum -->
+  <section class="section impressum" id="impressum">
+    <h2>Impressum</h2>
+    <div class="impressum-box">
+      <p class="label">Verantwortlichkeiten</p>
+
+      <h3>Verantwortlich für den Inhalt</h3>
+      <p>Yanik Lüscher<br>
+        Fluhmühlerain 11<br>
+        6015 Luzern<br>
+        Schweiz</p>
+
+      <h3>Kontakt</h3>
+      <p>Yanik.Luescher@students.fhgr.ch</p>
+
+      <h3>Über dieses Projekt</h3>
+      <p>Diese Website entstand im Rahmen eines Multimedia-Projekts und widmet sich meinem persönlichen Lieblingsobjekt, dem Stevens Tabor 2025 in der Farbe Earth Green.</p>
+
+      <h3>Urheberrecht</h3>
+      <p>Die Inhalte, Texte und Gestaltung dieser Website unterliegen dem Urheberrecht. Eine Verwendung oder Weiterverbreitung ohne vorherige Zustimmung ist nicht gestattet. Bildmaterial Dritter ist entsprechend gekennzeichnet.</p>
+
+      <h3>Haftung</h3>
+      <p>Die Inhalte dieser Website wurden mit Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte wird jedoch keine Gewähr übernommen. Für Inhalte externer Links sind ausschliesslich deren Betreiber verantwortlich.</p>
+    </div>
+  </section>
+
+</main>
+
+<!-- Footer mit Light/Dark-Schalter (auf allen Seiten gleich) -->
+<footer class="site-footer">
+  <div class="footer-text">
+    <p class="footer-projekt">STEVENS TABOR 2025 - IM1 Projektarbeit</p>
+    <p>© Yanik Lüscher</p>
+  </div>
+  <div class="theme-switch">
+    <span id="theme-label">Light mode</span>
+    <button class="theme-toggle" id="theme-toggle" type="button" role="switch" aria-checked="false" aria-label="Dark mode umschalten"></button>
+  </div>
+</footer>
+
+</body>
+</html>

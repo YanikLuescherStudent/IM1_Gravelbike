@@ -2,9 +2,117 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>Gravelbike</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>STEVENS TABOR 2025 – Home</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/theme-toggle.js"></script>
 </head>
+
+
 <body>
- <h1>Das ist ein Gravelbike</h1>
+<header class="site-header">
+    <a class="logo" href="index.html">STEVENS TABOR / 2025</a>
+    <nav class="site-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="ueber-mich.html">Über mich</a></li>
+            <li><a href="kontakt.html">Kontakt &amp; Impressum</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <!-- Hero: kurze Vorstellung und grosses Bild -->
+    <section class="section hero">
+        <div class="hero-text">
+            <p class="eyebrow">Mein Lieblingsobjekt</p>
+            <h1>Tabor 2025.<br>Earth Green.</h1>
+            <p>Ein persönlicher Blick auf mein STEVENS Gravel Bike.</p>
+        </div>
+        <div class="hero-bild">
+            <!-- Bild: aus Figma exportieren und als images/hero-tabor.png speichern + width und height anpassen -->
+            <img src="img/hero-tabor.png" alt="STEVENS Tabor 2025 in Earth Green, Seitenansicht" width="843" height="488">
+        </div>
+    </section>
+
+    <!-- Persönlicher Bezug und technische Daten -->
+    <section class="section content">
+        <h2>Warum dieses Bike?</h2>
+        <div>
+            <p><strong>Warum Tabor?</strong><br>
+                Ich wollte ein Fahrrad, das mich nicht auf eine bestimmte Strecke festlegt. Eines, mit dem ich spontan losfahren, neue Wege entdecken und den Alltag hinter mir lassen kann. Genau das habe ich im Stevens Tabor gefunden.</p>
+            <p>Seine Vielseitigkeit, die durchdachte Ausstattung und das schlichte Design machen es für mich zum idealen Begleiter – egal, ob auf Asphalt, Schotterwegen oder längeren Touren. Dabei überzeugt mich nicht nur, was das Tabor kann, sondern auch, wie es aussieht. Die Farbe Earth Green und die klare Formgebung waren für mich von Anfang an ein entscheidender Teil der Wahl.</p>
+            <p>Die technischen Eigenschaften bilden dabei die Grundlage für das, was ich an diesem Fahrrad schätze: Freiheit, Flexibilität und die Möglichkeit, einfach loszufahren. Die wichtigsten Details zeigen, weshalb das Tabor für mich genau die richtige Wahl ist.</p>
+        </div>
+
+        <!-- Erste Reihe mit drei Kerndaten -->
+        <dl class="fakten">
+            <div class="fakt"><dt>Rahmen</dt><dd>Aluminium 6061 TB</dd></div>
+            <div class="fakt"><dt>Gewicht</dt><dd>ca. 11,6 kg</dd></div>
+            <div class="fakt"><dt>Reifen</dt><dd>Schwalbe 40-622</dd></div>
+        </dl>
+
+        <!-- Zweite Reihe mit drei Kerndaten -->
+        <dl class="fakten">
+            <div class="fakt"><dt>Kassette</dt><dd>Shimano CS-HG50-10</dd></div>
+            <div class="fakt"><dt>Schaltung hinten</dt><dd>Shimano GRX 400 Shadow+</dd></div>
+            <div class="fakt"><dt>Bremsen + Bremsscheiben</dt><dd>TRP Spyre C mit Shimano SM-RT30</dd></div>
+        </dl>
+    </section>
+
+    <!-- Lieblingstouren: drei gleiche Karten -->
+    <section class="section content">
+        <h2>Meine Lieblingstouren</h2>
+        <div class="touren">
+
+            <article class="tour">
+                <img src="img/route-horwerhalbinsel.png" alt="Kartenausschnitt der Route Horwerhalbinsel" width="393" height="300">
+                <div>
+                    <h3>Horwerhalbinsel</h3>
+                    <p>Distanz: 25.08km<br>
+                        Zeit: 1:25:51<br>
+                        Höhenzunahme: 268m<br>
+                        Durchschnittsgeschwindigkeit: 21.3 km/h</p>
+                </div>
+            </article>
+
+            <article class="tour">
+                <img src="img/route-feierabend.png" alt="Kartenausschnitt der Feierabend-Tour" width="393" height="300">
+                <div>
+                    <h3>Feierabend-Tour</h3>
+                    <p>Distanz: 22.43km<br>
+                        Zeit: 1:07:09<br>
+                        Höhenzunahme: 124m<br>
+                        Durchschnittsgeschwindigkeit: 23.2 km/h</p>
+                </div>
+            </article>
+
+            <article class="tour">
+                <img src="img/route-kuessnacht.png" alt="Kartenausschnitt der Brunch-Tour Küssnacht" width="393" height="300">
+                <div>
+                    <h3>Brunch-Tour Küssnacht</h3>
+                    <p>Distanz: 42.93km<br>
+                        Zeit: 2:15:22<br>
+                        Höhenzunahme: 494m<br>
+                        Durchschnittsgeschwindigkeit: 21.4 km/h</p>
+                </div>
+            </article>
+
+        </div>
+    </section>
+</main>
+
+<!-- Footer mit Light/Dark-Schalter (auf allen Seiten gleich) -->
+<footer class="site-footer">
+    <div class="footer-text">
+        <p class="footer-projekt">STEVENS TABOR 2025 - IM1 Projektarbeit</p>
+        <p>© Yanik Lüscher</p>
+    </div>
+    <div class="theme-switch">
+        <span id="theme-label">Light mode</span>
+        <button class="theme-toggle" id="theme-toggle" type="button" role="switch" aria-checked="false" aria-label="Dark mode umschalten"></button>
+    </div>
+</footer>
+
 </body>
 </html>
