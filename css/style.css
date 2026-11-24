@@ -35,7 +35,7 @@
 
 /* 2. GRUNDLAGEN */
 * {
-    box-sizing: border-box; /* Padding zählt zur Breite dazu */
+    box-sizing: border-box;
 }
 
 body {
@@ -50,10 +50,6 @@ body {
 img {
     display: block;
     max-width: 100%;
-}
-
-a {
-    color: inherit;
 }
 
 /* Gleiche Überschriften auf allen Seiten */
@@ -86,7 +82,7 @@ p {
     color: var(--accent);
 }
 
-/* Jeder Bereich hat links und rechts 80px Rand */
+/* Jeder Bereich hat links und rechts 80px Rand, oben und unten 48px */
 .section {
     padding: 48px 80px;
 }
@@ -137,11 +133,7 @@ p {
     width: 158px;
 }
 
-/* Die aktuelle Seite ist hervorgehoben */
-.site-nav a[aria-current="page"] {
-    background: var(--secondary);
-}
-
+/* Die angehoverte Seite wird hervorgehoben */
 .site-nav a:hover {
     background: var(--secondary);
 }
