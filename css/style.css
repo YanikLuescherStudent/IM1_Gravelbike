@@ -16,6 +16,7 @@
 /* 1. FARBEN
    Alle Farben stehen als Variablen hier. Der Dark-Mode überschreibt sie,
    sobald am <html>-Element data-theme="dark" gesetzt ist (siehe js/theme.js). */
+
 :root {
     --background: #f7f6ef;
     --primary: #e2e9d8;
@@ -25,7 +26,7 @@
     --text-secondary: #526052;
 }
 
-:root[data-theme="dark"] {
+[data-theme="dark"] {
     --background: #27312a;
     --primary: #303e30;
     --secondary: #4e4434;
@@ -511,7 +512,7 @@ p:last-child {
 }
 
 /* Der Schalter selbst: ein Button, der wie ein Kippschalter aussieht */
-.theme-toggle {
+.toggle-theme {
     position: relative;
     width: 48px;
     height: 28px;
@@ -522,7 +523,7 @@ p:last-child {
     cursor: pointer;
 }
 
-.theme-toggle::after {
+.toggle-theme::after {
     content: "";
     position: absolute;
     top: 4px;

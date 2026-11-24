@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const toggle = document.querySelector("#toggle-theme");
+    const toggle = document.querySelector(".toggle-theme");
     if (!toggle) return;
     const saved = localStorage.getItem("theme") || "light";
     document.body.dataset.theme = saved;
