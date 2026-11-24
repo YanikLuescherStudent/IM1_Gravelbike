@@ -1,5 +1,4 @@
-/* ==========================================================
-   style.css – STEVENS TABOR / 2025 (IM1 Projektwebsite)
+/*
    Aufbau:
    1. Farben (Light- und Dark-Mode)
    2. Grundlagen (Schrift, Abstände)
@@ -10,8 +9,7 @@
    7. Kontakt und Impressum
    8. Footer mit Light/Dark-Schalter
    9. Kleine Bildschirme
-   Die Werte stammen aus dem Figma-Entwurf "IM-1 – Konzeption".
-   ========================================================== */
+   */
 
 /* 1. FARBEN
    Alle Farben stehen als Variablen hier. Der Dark-Mode überschreibt sie,
@@ -71,16 +69,14 @@ h1 { font-size: 52px; line-height: 1.15; }
 h2 { font-size: 30px; line-height: 1.25; }
 h3 { font-size: 30px; line-height: 1.25; }
 
+
 p {
     margin: 0 0 1.55em;
 }
 
-p:last-child {
-    margin-bottom: 0;
-}
 
-/* Kleine Zeile über einer Überschrift, z. B. "PERSÖNLICH" */
-.eyebrow {
+/* Kleine Zeile über einer Überschrift */
+.zwischentitel {
     margin: 0;
     font-size: 12px;
     font-weight: 600;
